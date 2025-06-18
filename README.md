@@ -1,31 +1,37 @@
 # 🧠 TextLab Pro
 
-**TextLab Pro** è un’applicazione desktop sviluppata in PyQt6 che consente di elaborare testi da file `.pdf`, `.docx` e `.txt` tramite OpenAI GPT-4o.
+**TextLab Pro** è un’applicazione desktop in PyQt6 per l’elaborazione intelligente di testi da file `.pdf`, `.docx` e `.txt`, tramite modelli OpenAI come GPT-4o.  
+Supera il limite della lunghezza dei contenuti AI-friendly segmentando automaticamente i testi in blocchi compatibili con i token massimi ammessi.
 
-Affronta uno dei principali limiti dell’uso dell’intelligenza artificiale generativa: l’impossibilità di elaborare contenuti troppo lunghi in una singola richiesta. TextLab Pro suddivide automaticamente i testi in blocchi compatibili con i limiti token dei modelli, li processa uno ad uno, e restituisce risultati coerenti per ogni modalità selezionata.
+> ⚠️ **È obbligatorio disporre di una chiave API OpenAI valida**. Il sistema non funziona senza una `API key` attiva e associata al proprio account OpenAI.
 
 ---
 
 ## ✅ Funzionalità principali
 
 - 📂 Caricamento di file `.txt`, `.docx`, `.pdf`
-- 🔍 Estrazione testo con OCR (EasyOCR) per PDF non digitali
-- 🧠 Elaborazione multi-blocco compatibile con limiti token GPT
-- 🛠️ Modalità di AI:
+- 🔍 Estrazione OCR automatica per PDF non digitali (EasyOCR)
+- ✂️ Suddivisione automatica in blocchi compatibili con i limiti token GPT
+- 🤖 Elaborazione AI per:
   - Correzione
   - Riassunto
+  - Riformulazione
   - Miglioramento
-  - Umanizzazione
   - Semplificazione
+  - Formalizzazione
   - Prompt personalizzati
-- 🎨 Interfaccia moderna PyQt6 con tema chiaro/scuro
-- ✂️ Segmentazione automatica in blocchi di ~80 parole
-- 📥 Drag & Drop, salvataggio risultati `.txt`, supporto multi-tab
+- 🧠 Multi-modalità AI con elaborazione parallela su più blocchi
+- 🎨 Interfaccia moderna (chiaro/scuro), supporto drag & drop, multi-tab
+- 💾 Salvataggio risultati per ogni modalità selezionata in `.txt`
 
 ---
 
 ## 🚀 Installazione
 
+Clona il repository e installa le dipendenze:
+
 ```bash
+git clone https://github.com/tuo-utente/textlab-pro.git
+cd textlab-pro
 pip install -r requirements.txt
 python main.py
